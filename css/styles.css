@@ -2,11 +2,65 @@
     --background-color: rgb(19, 18, 18);
     --font-color: white;
     --font-family: 'Muli', sans-serif;
+    --font-keyReminder: 'Nova Mono', monospace;
 }
 
 body {
     color: var(--font-color);
     background-color: var(--background-color);
     font-family: var(--font-family);
+    background-image: url("../images/ilya-kuvshinov-sunglasses-women-with-shades-simple-background-wallpaper-89e0381d612a0d3bd6c7682f502136bd.jpg");
+    background-size: cover;
 }
 
+.tile {
+    display: inline-block;
+    margin: 5px;
+    width: 250px;
+    height: 400px;
+    background-color: rgba(155, 155, 155, 0.5);
+    border: 5px solid rgb(209, 209, 209);
+}
+
+.tile-title {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.tile-list {
+    list-style-type: none;
+}
+
+.tile-list li {
+    margin-top: 25px;
+    margin-left: -15px;
+    color: white;
+}
+
+.tile-list a {
+    color: var(--font-color);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.tile-key-reminder {
+    font-size: 1.2em;
+    font-family: var(--font-keyReminder);
+    margin: 10px 10px 10px 10px;
+    padding: 6px;
+    background: white;
+    color: black;
+    border-radius: 6px;
+}
+
+#main-content-box {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(57, 63, 70, 0);
+}
