@@ -6,8 +6,8 @@ const siteDict = {
     51:"https://boards.4chan.org/wg/",  //3
     52:"https://boards.4chan.org/gd/",  //4
     53:"https://boards.4chan.org/gif/", //5
-    55:"F:",                            //8
-    56:"C:",                            //9
+    55:"file:///F:/",                   //8
+    56:"file:///C:/",                   //9
     65:"https://www.audible.com",       //A
     66:"http://www.google.com",         //B 
     67:"http://www.lichess.org",        //C                
@@ -33,6 +33,6 @@ const siteDict = {
 function handleKeyPress(e) {
     e = e||window.event;
     if(e.keyCode in siteDict) {
-        window.open(siteDict[e.keyCode], target="_blank");
+        window.open(siteDict[e.keyCode], target="_self");
     }
 }
