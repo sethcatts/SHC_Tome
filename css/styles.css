@@ -9,39 +9,43 @@ body {
     color: var(--font-color);
     background-color: var(--background-color);
     font-family: var(--font-family);
-    background-image: url("../images/ilya-kuvshinov-sunglasses-women-with-shades-simple-background-wallpaper-89e0381d612a0d3bd6c7682f502136bd.jpg");
-    background-size: cover;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/cyber.png');
+    background-size:cover;
 }
 
 .tile {
     display: inline-block;
     margin: 5px;
-    width: 250px;
+    width: 225px;
     height: 400px;
-    background-color: rgba(155, 155, 155, 0.5);
-    border: 5px solid rgb(209, 209, 209);
+    background-color: rgba(155, 155, 155, 0);
+    border: 2px solid rgba(209, 209, 209, 0.25);
 }
 
 .tile-title {
     margin: 0;
     padding: 0;
     margin-top: 10px;
-    text-align: center;
+    margin-left: 15px;
+    text-align: left;
 }
 
 .tile-list {
+    position: absolute;
     list-style-type: none;
+    letter-spacing: 2px;
 }
 
 .tile-list li {
-    margin-top: 25px;
-    margin-left: -15px;
+    margin-bottom: 30px;
+    margin-left: -35px;
     color: white;
 }
 
 .tile-list a {
+    margin-top: 0px;
     color: var(--font-color);
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -63,4 +67,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(57, 63, 70, 0);
+}
+
+#pageQuote {
+    margin-left: 50px;
+    letter-spacing: 2px;
+    font-size: 2.2em;
+    margin-bottom: 10px;
 }
