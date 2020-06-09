@@ -10,3 +10,9 @@ function handleKeyPress(e) {
 
 console.log(user_settings.name);
 
+function randomQuote() {
+    var selectedQuote = user_settings.quotes[Math.floor(Math.random() * user_settings.quotes.length)];
+    document.getElementById('pageQuote').innerHTML = selectedQuote;
+}
+
+randomQuote();

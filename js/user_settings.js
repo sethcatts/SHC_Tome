@@ -28,10 +28,10 @@ const siteDict = {
     116:"https://www.youtube.com/playlist?list=PLLyULqS39DP-PfyjiEL_0MK0ZXp0CnuIk"  //F5
 }
 
-const quotes = [];
+const quotes = ["this is it. fuck it. it is what it is", "integrate your shadow", "archetypes are only that"];
 
 var user_settings = {
     "name":"James Smith",
     "siteDict":siteDict,
-
+    "quotes":quotes
 }
