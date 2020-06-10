@@ -6,5 +6,14 @@
     "chrome_url_overrides": {
       "newtab": "tome.html"
     },
-    "manifest_version": 2
+    "manifest_version": 2,
+    "content_scripts": [
+      {
+        "js": ["js/scripts.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
   }
