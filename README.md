@@ -1,5 +1,7 @@
 # Tome
 Tome (Tab/Home) is a small page I put together simply because I couldn't find a new tab home screen that did exactly what I want. I put together Tome in roughly an afternoon. I ignored some best practices and didn't leave any comments. Tome reflects my ability to hack together a solution quickly, not my skill as a developer.
+![example image](https://i.imgur.com/sXbkx4I.jpg)
+
 # Features
 ### Bookmark Boxes
 Bookmark boxes contain links to most visited sites. They must be changed by editing the HTML
