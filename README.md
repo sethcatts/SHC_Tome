@@ -7,5 +7,5 @@ Bookmark boxes contain links to most visited sites. They must be changed by edit
 ### HotKeys
 Bookmarks have a hotkey associated with them. When the page is in focus and a relevant hotkey is pressed the bookmark is opened.
 
-### Quotes (Not implemented)
-On page load, a random quote is placed above bookmark boxes. These quotes are pulled from an array.
+### Quotes
+On page load, a random quote is placed above bookmark boxes. These quotes are pulled from an array in the user.js file.
