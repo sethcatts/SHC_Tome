@@ -1,4 +1,5 @@
 document.onkeydown = handleKeyPress;
+console.log(user_settings.name);
 
 //Orgasmicly simple code
 function handleKeyPress(e) {
@@ -8,9 +9,12 @@ function handleKeyPress(e) {
     }
 }
 
-console.log(user_settings.name);
-
 function randomQuote() {
+    var selectedQuote = user_settings.quotes[Math.floor(Math.random() * user_settings.quotes.length)];
+    document.getElementById('pageQuote').innerHTML = selectedQuote;
+}
+
+function randomWall() {
     var selectedQuote = user_settings.quotes[Math.floor(Math.random() * user_settings.quotes.length)];
     document.getElementById('pageQuote').innerHTML = selectedQuote;
 }
@@ -42,5 +46,6 @@ function updateClock() {
 }
 
 randomQuote();
+//randomWall();
 updateClock();
 setInterval('updateClock()', 1000);
