@@ -72,7 +72,16 @@ body {
 #pageQuote {
     margin-left: 50px;
     letter-spacing: 2px;
-    font-size: 2.2em;
+    font-size: 2.5em;
     margin-bottom: 10px;
     opacity: 90%;
+}
+
+#clock {
+    font-family: var(--font-family);
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    position: absolute;
+    right: 50px;
+    margin-bottom: 10px;
 }
