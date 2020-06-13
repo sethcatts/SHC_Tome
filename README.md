@@ -3,7 +3,7 @@ Tome (Tab/Home) is a small page I put together simply because I couldn't find a 
 
 ![example image](https://i.imgur.com/sXbkx4I.jpg)
 
-# Tome's limited features
+# Tome's (limited) features
 ### Bookmark Boxes
 Bookmark boxes contain specified links to sites. They must be changed by editing the HTML. I toyed with the idea of populating them with a on-pageload script that matched the keybind dictionary but since these are fairly static for me I'm holding off. Also, I would have had to convert all the links in the dictionary to objects with some "category" property so that things got put in the right place. 
 
