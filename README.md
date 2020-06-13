@@ -10,11 +10,12 @@ Bookmark boxes contain specified links to sites. They must be changed by editing
 ### HotKeys
 Bookmarks have a hotkey associated with them. When the page is in focus and a relevant hotkey is pressed the bookmark is opened.
 There are two main issues with this, double bound keys and page focus. 
-**Double Bound Keys:** As far as I know there is no fix for this. Example: F1 in chrome will open the *chrome help center* and also whatever Tome has bound to F1
-**Page Focus:** When a new tab is created the focus is in the browsers address bar, hotkeys will not work until the user hits tab or clicks on the actual page.
+###### Double Bound Keys
+As far as I know there is no fix for this. Example: F1 in chrome will open the *chrome help center* and also whatever Tome has bound to F1
+###### Page Focus
+When a new tab is created the focus is in the browsers address bar, hotkeys will not work until the user hits tab or clicks on the actual page.
 
-#### Nice
-
+###### Nice
 I was very happy with this little function combined with the user.js dictionary. A much better solution than some large *switch* or *elif* block to assign keys.
 ```Javascript
 function handleKeyPress(e) {
