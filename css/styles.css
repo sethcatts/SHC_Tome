@@ -1,6 +1,6 @@
 :root {
     --background-color: rgb(44, 50, 78);
-    --font-color: white;
+    --font-color: rgba(255, 255, 255, 0.75);
     --font-family: 'Muli', sans-serif;
     --font-keyReminder: 'Nova Mono', monospace;
 }
@@ -9,7 +9,7 @@ body {
     color: var(--font-color);
     background-color: var(--background-color);
     font-family: var(--font-family);
-    background-image: url("/images/forest.jpg");
+    background-image: url("/images/tea.png");
     background-size:cover;
 }
 
@@ -18,8 +18,9 @@ body {
     margin: 5px;
     width: 225px;
     height: 400px;
-    background-color: rgba(155, 155, 155, 0);
-    border: 2px solid rgba(209, 209, 209, 0.25);
+    background-color: rgba(63, 106, 141, 0.1);
+    border-top: 5px solid rgb(255, 255, 255);
+    border-left: 2px solid rgba(255, 255, 255, 0);
 }
 
 .tile-title {
@@ -39,7 +40,7 @@ body {
 .tile-list li {
     margin-bottom: 30px;
     margin-left: -35px;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .tile-list a {
@@ -57,7 +58,7 @@ body {
     font-size: 1.2em;
     font-family: var(--font-keyReminder);
     margin: 10px 10px 10px 10px;
-    padding: 6px;
+    padding: 8px;
     background: white;
     color: black;
     border-radius: 6px;
@@ -67,8 +68,8 @@ body {
     width: 80%;
     height: 500px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 35%;
+    left: 45%;
     transform: translate(-50%, -50%);
     background-color: rgba(57, 63, 70, 0);
 }
@@ -79,6 +80,7 @@ body {
     font-size: 2.5em;
     margin-bottom: 10px;
     opacity: 90%;
+    font-style: italic;
 }
 
 #clock {
