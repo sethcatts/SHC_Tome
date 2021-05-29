@@ -1,8 +1,10 @@
 :root {
-    --background-color: rgb(19, 20, 24);
+    --background-color: rgb(14, 16, 22);
     --font-color: rgba(255, 255, 255, 0.75);
     --font-family: 'Muli', sans-serif;
     --font-keyReminder: 'Nova Mono', monospace;
+    --tile-border-color: rgb(100, 24, 24);
+    --tile-border-thickness: 3px;
 }
 
 body {
@@ -18,9 +20,82 @@ body {
     margin: 5px;
     width: 225px;
     height: 400px;
+    
     background-color: rgba(0, 0, 0, 0.5);
-    border-top: 5px solid rgb(255, 255, 255);
-    border-left: 2px solid rgba(255, 255, 255, 0);
+    border-top: var(--tile-border-thickness) solid var(--tile-border-color);
+    border-left: var(--tile-border-thickness) solid var(--tile-border-color);
+    border-right: var(--tile-border-thickness) solid var(--tile-border-color);
+    border-bottom: var(--tile-border-thickness) solid var(--tile-border-color);
+}
+
+#link-box {
+    width: 750px;
+    height: 450px;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color)
+}
+
+#link-area {
+    width: 750px;
+    height: 450px;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+#search-bar {
+    width: 750px;
+    height: 40px;
+    position: absolute;
+    top: 96%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color);
+}
+
+.searchform input {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    width: 100%;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: var(--font-color);
+    caret-color: var(--tile-border-color);
+    font-family: var(--font-family)
+}
+
+.searchform input:focus{
+    border: none;
+    outline-width: 0;
+}
+
+
+
+#stinger-image {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: cover;
+}
+
+#stinger-tint {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color:rgba(100, 24, 24, 0.1)
 }
 
 .tile-title {
@@ -29,29 +104,31 @@ body {
     margin-top: 10px;
     margin-left: 15px;
     text-align: left;
+    letter-spacing: 5px;
 }
 
 .tile-list {
-    position: absolute;
+    display: inline-block;
     list-style-type: none;
     letter-spacing: 2px;
+    width: 200px;
 }
 
 .tile-list li {
-    margin-bottom: 30px;
-    margin-left: -35px;
+    margin-bottom: 25px;
+    margin-left: 0px;
     color: rgba(255, 255, 255, 1);
 }
 
 .tile-list a {
     margin-top: 0px;
     color: var(--font-color);
-    font-size: 20px;
+    font-size: 1.5em;
     text-decoration: none;
 }
 
 .tile-list a:hover{
-	margin-left: 5px;
+	color: var(--tile-border-color);
 }
 
 .tile-key-reminder {
@@ -68,8 +145,8 @@ body {
     width: 80%;
     height: 500px;
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 50%;
+    left: 54%;
     transform: translate(-50%, -50%);
     background-color: rgba(57, 63, 70, 0);
 }
@@ -81,15 +158,20 @@ body {
     margin-bottom: 10px;
     opacity: 90%;
     font-style: italic;
+    visibility: hidden;
 }
 
 #clock {
-    font-family: var(--font-family);
-    font-size: 2.5em;
-    letter-spacing: 5px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 8px;
     position: absolute;
     right: 100px;
     margin-bottom: 10px;
+    position: absolute;
+    top: 20%;
+    left: 46.7%;
+    transform: translate(-50%, -50%);
 }
 
 .hidden {
