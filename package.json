@@ -1,0 +1,19 @@
+{
+  "name": "shc_tome",
+  "version": "1.0.0",
+  "description": "TAB HOME. TOME",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethcatts/SHC_Tome.git"
+  },
+  "author": "Seth Catts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethcatts/SHC_Tome/issues"
+  },
+  "homepage": "https://github.com/sethcatts/SHC_Tome#readme"
+}
