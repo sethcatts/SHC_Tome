@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="/images/icons/site.ico">
 
     <title>Tome</title>
     <meta name="description" content="The HTML5 Herald">
@@ -17,39 +18,59 @@
 <body>
 
     <h1 id="clock"></h1>
-    <h1 id="pageQuote"></h1>
 
     <div id="main-content-box">
+        <iframe src="https://todoist.com/app/today" title="todoist" class="tile"
+            id="iframe-todoist"></iframe>
         <div class="tile" id="link-box">
             <div id="link-area">
                 <ul class="tile-list">
+                    <div class="icon-div"><img src="images/icons/youtube.png" class="link-icon"></div>
                     <li><a href="https://www.youtube.com/feed/subscriptions">youtube</a></li>
+                    <div class="icon-div"><img src="images/icons/netflix.png" class="link-icon"></div>
                     <li><a href="https://www.netflix.com/browse">netflix</a></li>
-                    <li><a href="https://soundcloud.com/seth-catts/likes">soundcloud</a></li>
+                    <div class="icon-div"><img src="images/icons/soundcloud.png" class="link-icon"></div>
+                    <li><a href="https://open.spotify.com">spotify</a></li>
+                    <div class="icon-div"><img src="images/icons/order.png" class="link-icon"></div>
                     <li><a href="https://www.amazon.com/">amazon</a></li>
-                    <li><a href="https://www.chess.com/play/computer">chess</a></li>
-                    <li><a href="https://www.youtube.com/playlist?list=PLLyULqS39DP-PfyjiEL_0MK0ZXp0CnuIk">contraband</a></li>
+                    <div class="icon-div"><img src="images/icons/icon.png" class="link-icon"></div>
+                    <li><a href="https://mail.google.com/mail/u/0/#inbox">email</a></li>
+                    <div class="icon-div"><img src="images/icons/musical-notes.png" class="link-icon"></div>
+                    <li><a
+                            href="https://www.youtube.com/playlist?list=PLLyULqS39DP-PfyjiEL_0MK0ZXp0CnuIk">contraband</a>
+                    </li>
                 </ul>
                 <ul class="tile-list">
+                    <div class="icon-div"><img src="images/icons/to-do-list.png" class="link-icon"></div>
                     <li><a href="https://todoist.com/app/today">todo</a></li>
+                    <div class="icon-div"><img src="images/icons/web-programming.png" class="link-icon"></div>
                     <li><a href="https://learn.freecodecamp.org/">fcc</a></li>
+                    <div class="icon-div"><img src="images/icons/console.png" class="link-icon"></div>
                     <li><a href="https://console.aws.amazon.com/console/home?region=us-east-1">aws</a></li>
+                    <div class="icon-div"><img src="images/icons/math.png" class="link-icon"></div>
                     <li><a href="https://www.desmos.com/calculator">desmos</a></li>
+                    <div class="icon-div"><img src="images/icons/math1.png" class="link-icon"></div>
                     <li><a href="https://www.khanacademy.org/profile/TheFarWolf/courses">math</a></li>
+                    <div class="icon-div"><img src="images/icons/dgg.png" class="link-icon"></div>
                     <li><a href="https://www.destiny.gg/bigscreen">dgg</a></li>
                 </ul>
                 <ul class="tile-list">
+                    <div class="icon-div"><img src="images/icons/g.png" class="link-icon"></div>
                     <li><a href="https://boards.4channel.org/g/">/g/</a></li>
+                    <div class="icon-div"><img src="images/icons/wallpaper.png" class="link-icon"></div>
                     <li><a href="https://boards.4channel.org/wg/">/wg/</a></li>
+                    <div class="icon-div"><img src="images/icons/fit.png" class="link-icon"></div>
                     <li><a href="https://boards.4channel.org/fit/">/fit/</a></li>
+                    <div class="icon-div"><img src="images/icons/gd.png" class="link-icon"></div>
                     <li><a href="https://boards.4channel.org/gd/">/gd/</a></li>
+                    <div class="icon-div"><img src="images/icons/webm.png" class="link-icon"></div>
                     <li><a href="https://boards.4channel.org/wsg/">/wsg/</a></li>
+                    <div class="icon-div"><img src="images/icons/video.png" class="link-icon"></div>
                     <li><a href="https://boards.4channel.org/tv/">/tv/</a></li>
                 </ul>
             </div>
         </div>
         <div class="tile" id="stinger-image">
-
         </div>
         <div class="tile" id="stinger-tint">
 
@@ -63,6 +84,9 @@
             </form>
         </div>
     </div>
+
+        <div id="pageQuote"></div>
+
     <script src="js/user.js"></script>
     <script src="js/scripts.js"></script>
 </body>

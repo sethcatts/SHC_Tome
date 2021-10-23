@@ -1,17 +1,19 @@
 :root {
-    --background-color: rgb(14, 16, 22);
-    --font-color: rgba(255, 255, 255, 0.75);
-    --font-family: 'Muli', sans-serif;
+    --background-color: #3d3026;
+    --font-color: #ff4483;
+    --font-family: 'rajdhani';
     --font-keyReminder: 'Nova Mono', monospace;
-    --tile-border-color: rgb(100, 24, 24);
+    --tile-border-color: #a4a4aca9;
     --tile-border-thickness: 3px;
+    --tile-backgroundcolor: #000000a8;
+    --top-delta: 50%;
 }
 
 body {
     color: var(--font-color);
     background-color: var(--background-color);
     font-family: var(--font-family);
-    /** background-image: url("/images/railroad.jpg"); **/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hh.jpg");
     background-size:cover;
 }
 
@@ -29,32 +31,44 @@ body {
 }
 
 #link-box {
-    width: 750px;
-    height: 450px;
+    width: 800px;
+    height: 700px;
     position: absolute;
-    top: 45%;
-    left: 35%;
+    top: var(--top-delta);
+    left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--background-color)
+    background-color: var(--tile-backgroundcolor);
 }
 
-#link-area {
+/* #link-area {
     width: 750px;
     height: 450px;
     position: absolute;
     top: 60%;
-    left: 55%;
+    left: 53%;
     transform: translate(-50%, -50%);
+} */
+
+#iframe-todoist {
+    width: 400px;
+    height: 700px;
+    position: absolute;
+    top: var(--top-delta);
+    left: 10%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-size: cover;
 }
 
 #search-bar {
+    visibility: hidden;
     width: 750px;
     height: 40px;
     position: absolute;
     top: 96%;
     left: 35%;
     transform: translate(-50%, -50%);
-    background-color: var(--background-color);
+    background-color: var(--tile-backgroundcolor);
 }
 
 .searchform input {
@@ -78,24 +92,27 @@ body {
 
 
 #stinger-image {
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 700px;
     position: absolute;
-    top: 50%;
-    left: 70%;
+    top: var(--top-delta);
+    left: 90%;
     transform: translate(-50%, -50%);
     background-position: center;
     background-size: cover;
+    background-position: -80px 0px; 
+    background-image: url("../images/stingers/sting\ \(55\).jpg") !important;
 }
 
 #stinger-tint {
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 700px;
     position: absolute;
-    top: 50%;
-    left: 70%;
+    top: var(--top-delta);
+    left: 90%;
     transform: translate(-50%, -50%);
-    background-color:rgba(100, 24, 24, 0.1)
+    background-color: var(--tile-border-color);
+    opacity: 0.0;
 }
 
 .tile-title {
@@ -108,69 +125,87 @@ body {
 }
 
 .tile-list {
+    margin-top: 65px;
     display: inline-block;
     list-style-type: none;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     width: 200px;
 }
 
 .tile-list li {
-    margin-bottom: 25px;
-    margin-left: 0px;
-    color: rgba(255, 255, 255, 1);
+    margin-bottom: 35px;
+    color: var(--font-color);
+    text-align: center;
+    margin-left: 3px;
+}
+
+.link-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-div {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 10%; /* or 50% */
+    background-color: var(--tile-border-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .tile-list a {
     margin-top: 0px;
     color: var(--font-color);
     font-size: 1.5em;
+    font-weight: bolder;
     text-decoration: none;
+    text-align: center;
+    margin-left: 3px;
 }
 
 .tile-list a:hover{
 	color: var(--tile-border-color);
 }
 
-.tile-key-reminder {
-    font-size: 1.2em;
-    font-family: var(--font-keyReminder);
-    margin: 10px 10px 10px 10px;
-    padding: 8px;
-    background: white;
-    color: black;
-    border-radius: 6px;
-}
 
 #main-content-box {
     width: 80%;
     height: 500px;
     position: absolute;
     top: 50%;
-    left: 54%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(57, 63, 70, 0);
+    background-color: rgba(112, 164, 225, 0);
 }
 
 #pageQuote {
-    margin-left: 50px;
-    letter-spacing: 2px;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    opacity: 90%;
+    opacity: 100%;
     font-style: italic;
-    visibility: hidden;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    text-shadow: -3px -1px #000000;
+    font-size: 3em;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #clock {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 1.5em;
-    letter-spacing: 8px;
+    font-size: 3em;
+    letter-spacing: 5px;
     position: absolute;
-    right: 100px;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 20%;
-    left: 46.7%;
+    top: 5%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -178,3 +213,5 @@ body {
     opacity: 0;
     position: absolute;
 }
+
+

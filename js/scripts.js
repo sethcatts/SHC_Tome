@@ -20,7 +20,7 @@ function randomWall() {
 }
 
 function randomStinger() {
-    var imageList = ['stinger (1).gif', 'stinger (1).jpg', 'stinger (1).png', 'stinger (10).JPG', 'stinger (11).JPG', 'stinger (12).JPG', 'stinger (13).JPG', 'stinger (14).JPG', 'stinger (15).jpg', 'stinger (16).jpg', 'stinger (17).JPG', 'stinger (18).jpg', 'stinger (19).jpg', 'stinger (2).jpg', 'stinger (2).PNG', 'stinger (20).jpg', 'stinger (21).jpg', 'stinger (22).jpg', 'stinger (23).jpg', 'stinger (24).jpg', 'stinger (25).jpg', 'stinger (26).jpg', 'stinger (3).jpg', 'stinger (3).PNG', 'stinger (4).JPG', 'stinger (4).png', 'stinger (5).jpg', 'stinger (5).PNG', 'stinger (6).JPG', 'stinger (6).png', 'stinger (7).JPG', 'stinger (7).png', 'stinger (8).JPG', 'stinger (8).png', 'stinger (9).JPG', 'stinger (9).png']
+    var imageList = ['s (1).gif', 's (1).jpg', 's (1).png', 's (10).JPG', 's (10).png', 's (11).JPG', 's (11).png', 's (12).JPG', 's (12).png', 's (13).JPG', 's (13).png', 's (14).JPG', 's (14).png', 's (15).jpg', 's (15).png', 's (16).jpg', 's (17).JPG', 's (18).jpg', 's (19).jpg', 's (2).jpg', 's (2).PNG', 's (20).jpg', 's (21).jpg', 's (22).jpg', 's (23).jpg', 's (24).jpg', 's (25).jpg', 's (26).jpg', 's (27).jpg', 's (28).jpg', 's (29).jpg', 's (3).jpg', 's (3).PNG', 's (30).jpg', 's (31).jpg', 's (32).jpg', 's (33).jpg', 's (34).jpg', 's (35).jpg', 's (36).jpg', 's (37).jpg', 's (38).jpg', 's (39).jpg', 's (4).JPG', 's (4).png', 's (40).jpg', 's (41).jpg', 's (42).jpg', 's (43).jpg', 's (44).jpg', 's (5).jpg', 's (5).PNG', 's (6).JPG', 's (6).png', 's (7).JPG', 's (7).png', 's (8).JPG', 's (8).png', 's (9).JPG', 's (9).png']
     var selectedImage = "url('/images/stingers/" + imageList[Math.floor(Math.random() * imageList.length)] + "')";
     var stingerDiv = document.getElementById('stinger-image');
     console.log(selectedImage)
@@ -47,13 +47,18 @@ function updateClock() {
   currentHours = ( currentHours == 0 ) ? 12 : currentHours;
 
   // Compose the string for display
-  var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
+  var currentTimeString = currentHours + ":" + currentMinutes + "" + timeOfDay;
+
+
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var dateString = days[currentTime.getDay()] + ", " + months[currentTime.getMonth()] + " " + currentTime.getDate() + ", " + currentTime.getFullYear();  
 
   // Update the time display
-  document.getElementById("clock").innerHTML = currentTimeString;
+  document.getElementById("clock").innerHTML = currentTimeString + " " + dateString;
 }
 
 randomQuote();
-randomStinger();
+//randomStinger();
 updateClock();
 setInterval('updateClock()', 1000);
