@@ -13,123 +13,39 @@ body {
     color: var(--font-color);
     background-color: var(--background-color);
     font-family: var(--font-family);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hh.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wallpapers/ll.jpg");
     background-size:cover;
 }
 
-.tile {
-    display: inline-block;
-    margin: 5px;
-    width: 225px;
-    height: 400px;
-    
-    background-color: rgba(0, 0, 0, 0.5);
-    border-top: var(--tile-border-thickness) solid var(--tile-border-color);
-    border-left: var(--tile-border-thickness) solid var(--tile-border-color);
-    border-right: var(--tile-border-thickness) solid var(--tile-border-color);
-    border-bottom: var(--tile-border-thickness) solid var(--tile-border-color);
-}
-
-#link-box {
-    width: 800px;
-    height: 700px;
+#link-area {
     position: absolute;
-    top: var(--top-delta);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--tile-backgroundcolor);
+    transform: translate(10%, 10%);
 }
-
-/* #link-area {
-    width: 750px;
-    height: 450px;
-    position: absolute;
-    top: 60%;
-    left: 53%;
-    transform: translate(-50%, -50%);
-} */
 
 #iframe-todoist {
-    width: 400px;
-    height: 700px;
-    position: absolute;
-    top: var(--top-delta);
-    left: 10%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
     background-position: center;
     background-size: cover;
+    border: 3px solid rgba(0, 0, 0, 0.5);
 }
-
-#search-bar {
-    visibility: hidden;
-    width: 750px;
-    height: 40px;
-    position: absolute;
-    top: 96%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    background-color: var(--tile-backgroundcolor);
-}
-
-.searchform input {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    width: 100%;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    color: var(--font-color);
-    caret-color: var(--tile-border-color);
-    font-family: var(--font-family)
-}
-
-.searchform input:focus{
-    border: none;
-    outline-width: 0;
-}
-
-
 
 #stinger-image {
-    width: 400px;
-    height: 700px;
-    position: absolute;
-    top: var(--top-delta);
-    left: 90%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(0, 0, 0, 0.5);
     background-position: center;
     background-size: cover;
-    background-position: -80px 0px; 
-    background-image: url("../images/stingers/sting\ \(55\).jpg") !important;
+    background-position: -500px -90px; 
+    background-image: url("../images/stingers/stinger\ \(14\).jpg") !important;
 }
 
-#stinger-tint {
-    width: 400px;
-    height: 700px;
-    position: absolute;
-    top: var(--top-delta);
-    left: 90%;
-    transform: translate(-50%, -50%);
-    background-color: var(--tile-border-color);
-    opacity: 0.0;
-}
-
-.tile-title {
-    margin: 0;
-    padding: 0;
-    margin-top: 10px;
-    margin-left: 15px;
-    text-align: left;
-    letter-spacing: 5px;
-}
 
 .tile-list {
-    margin-top: 65px;
+    margin: 0px auto;
     display: inline-block;
     list-style-type: none;
     letter-spacing: 3px;
-    width: 200px;
 }
 
 .tile-list li {
@@ -163,7 +79,6 @@ body {
     margin-top: 0px;
     color: var(--font-color);
     font-size: 1.5em;
-    font-weight: bolder;
     text-decoration: none;
     text-align: center;
     margin-left: 3px;
@@ -173,45 +88,30 @@ body {
 	color: var(--tile-border-color);
 }
 
-
-#main-content-box {
-    width: 80%;
-    height: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(112, 164, 225, 0);
-}
-
 #pageQuote {
     opacity: 100%;
     font-style: italic;
-    font-weight: bold;
     text-align: center;
     font-family: 'Rajdhani', sans-serif;
     text-shadow: -3px -1px #000000;
-    font-size: 3em;
+    font-size: 2em;
     letter-spacing: 3px;
     position: absolute;
-    top: 95%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 #clock {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 3em;
+    font-size: 2em;
     letter-spacing: 5px;
-    position: absolute;
-    top: 5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    color:#ff4483;
 }
 
-.hidden {
-    opacity: 0;
-    position: absolute;
-}
+
+
 
 
