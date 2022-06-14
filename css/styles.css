@@ -9,7 +9,7 @@ body {
     color: var(--font-color);
     background-color: var(--background-color);
     font-family: var(--font-family);
-    background-image: url("/images/forest.jpg") , url("https://i.imgur.com/UDNEEWN.jpg");
+    background-image: url("https://i.pinimg.com/originals/3d/59/0f/3d590f4a22d76f0973a1c69f2b44053e.jpg");
     background-size:cover;
 }
 
