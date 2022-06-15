@@ -59,7 +59,6 @@ function updateClock() {
     document.getElementById("date").innerHTML = dateString;
 }
 
-
 function updateWeather() {
     console.log("Requesting Weather Data")
     let weather = {};
@@ -70,16 +69,15 @@ function updateWeather() {
         weather = JSON.parse(request.response);
         console.log(weather);
         let temp = weather.current.temp_f + "F";
-        document.getElementById("temp").insertAdjacentText("beforeend", temp);
-        document.getElementById("condition").insertAdjacentText("beforeend", weather.current.condition.text);
+        document.getElementById("temp").innerHTML = temp;
+        document.getElementById("condition").innerHTML = weather.current.condition.text
         document.getElementById("current-weather-icon").src = weather.current.condition.icon;
 
     }
 }
 
-
 //randomQuote();
-//randomStinger();
+randomStinger();
 updateWeather();
 updateClock();
 setInterval('updateClock()', 1000);
