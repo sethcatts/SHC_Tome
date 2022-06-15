@@ -83,3 +83,4 @@ function updateWeather() {
 updateWeather();
 updateClock();
 setInterval('updateClock()', 1000);
+setInterval('updateWeather()', 10000);
