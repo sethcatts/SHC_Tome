@@ -55,10 +55,11 @@ function updateClock() {
   var dateString = days[currentTime.getDay()] + ", " + months[currentTime.getMonth()] + " " + currentTime.getDate() + ", " + currentTime.getFullYear();  
 
   // Update the time display
-  document.getElementById("clock").innerHTML = currentTimeString + " " + dateString;
+  document.getElementById("time").innerHTML = currentTimeString;
+  document.getElementById("date").innerHTML = dateString;
 }
 
-randomQuote();
+//randomQuote();
 //randomStinger();
 updateClock();
 setInterval('updateClock()', 1000);
