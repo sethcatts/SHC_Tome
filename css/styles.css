@@ -28,58 +28,6 @@ body {display:table-cell; text-align:center; vertical-align:middle;}
     color: rgb(0, 0, 0);
 }
 
-.tile-list {
-    margin: 0px auto;
-    display: inline-block;
-    list-style-type: none;
-    letter-spacing: 3px;
-}
-
-.tile-list li {
-    margin-bottom: 35px;
-    color: var(--font-color);
-    text-align: center;
-    margin-left: 3px;
-}
-
-.link-icon {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.icon-div {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 10%;
-    background-color: var(--tile-border-color);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.tile-list a {
-    margin-top: 0px;
-    color: var(--font-color);
-    font-size: 1.5em;
-    text-decoration: none;
-    text-align: center;
-    margin-left: 3px;
-}
-
-.tile-list a:hover {
-    color: var(--tile-border-color);
-}
-
-#link-area {
-    position: absolute;
-    transform: translate(10%, 10%);
-}
-
 #iframe-todoist {
     width: 100%;
     height: 100%;
@@ -101,6 +49,7 @@ body {display:table-cell; text-align:center; vertical-align:middle;}
 
 #date {
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #stinger-image {
@@ -136,6 +85,22 @@ body {display:table-cell; text-align:center; vertical-align:middle;}
     left: 50%;
     text-align: center;
     color: var(--font-color);
+    margin-bottom: 0px;
+}
+
+#weather {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2em;
+    letter-spacing: 5px;
+    left: 50%;
+    text-align: center;
+    color: var(--font-color);
+    margin-bottom: 0px;
+    display: inline-flex;
+}
+
+#weather p {
+    margin: 10px;
 }
 
 /* =========> Drop Down CSS <========= */
