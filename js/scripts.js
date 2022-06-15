@@ -3,9 +3,9 @@ console.log(user_settings.name);
 
 //Orgasmicly simple code
 function handleKeyPress(e) {
-    e = e||window.event;
-    if(e.keyCode in siteDict) {
-        window.open(user_settings.siteDict[e.keyCode], target="_self");
+    e = e || window.event;
+    if (e.keyCode in siteDict) {
+        window.open(user_settings.siteDict[e.keyCode], target = "_self");
     }
 }
 
@@ -28,38 +28,58 @@ function randomStinger() {
 }
 
 function updateClock() {
-  var currentTime = new Date();
-  var currentHours = currentTime.getHours();
-  var currentMinutes = currentTime.getMinutes();
-  var currentSeconds = currentTime.getSeconds();
+    var currentTime = new Date();
+    var currentHours = currentTime.getHours();
+    var currentMinutes = currentTime.getMinutes();
+    var currentSeconds = currentTime.getSeconds();
 
-  // Pad the minutes and seconds with leading zeros, if required
-  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+    // Pad the minutes and seconds with leading zeros, if required
+    currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+    currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
 
-  // Choose either "AM" or "PM" as appropriate
-  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+    // Choose either "AM" or "PM" as appropriate
+    var timeOfDay = (currentHours < 12) ? "AM" : "PM";
 
-  // Convert the hours component to 12-hour format if needed
-  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+    // Convert the hours component to 12-hour format if needed
+    currentHours = (currentHours > 12) ? currentHours - 12 : currentHours;
 
-  // Convert an hours component of "0" to "12"
-  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+    // Convert an hours component of "0" to "12"
+    currentHours = (currentHours == 0) ? 12 : currentHours;
 
-  // Compose the string for display
-  var currentTimeString = currentHours + ":" + currentMinutes + "" + timeOfDay;
+    // Compose the string for display
+    var currentTimeString = currentHours + ":" + currentMinutes + "" + timeOfDay;
 
 
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  var dateString = days[currentTime.getDay()] + ", " + months[currentTime.getMonth()] + " " + currentTime.getDate() + ", " + currentTime.getFullYear();  
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var dateString = days[currentTime.getDay()] + ", " + months[currentTime.getMonth()] + " " + currentTime.getDate() + ", " + currentTime.getFullYear();
 
-  // Update the time display
-  document.getElementById("time").innerHTML = currentTimeString;
-  document.getElementById("date").innerHTML = dateString;
+    // Update the time display
+    document.getElementById("time").innerHTML = currentTimeString;
+    document.getElementById("date").innerHTML = dateString;
 }
+
+
+function updateWeather() {
+    console.log("Requesting Weather Data")
+    let weather = {};
+    let request = new XMLHttpRequest();
+    request.open("GET", "http://api.weatherapi.com/v1/forecast.json?key=105f9c9a5ec7404b871193656221406&q=22901&days=3&aqi=no&alerts=no");
+    request.send();
+    request.onload = () => {
+        weather = JSON.parse(request.response);
+        console.log(weather);
+        let temp = weather.current.temp_f + "F";
+        document.getElementById("temp").insertAdjacentText("beforeend", temp);
+        document.getElementById("condition").insertAdjacentText("beforeend", weather.current.condition.text);
+        document.getElementById("current-weather-icon").src = weather.current.condition.icon;
+
+    }
+}
+
 
 //randomQuote();
 //randomStinger();
+updateWeather();
 updateClock();
 setInterval('updateClock()', 1000);
