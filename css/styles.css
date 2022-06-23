@@ -22,7 +22,7 @@ body {display:table-cell; text-align:center; vertical-align:middle;}
 .column {
     vertical-align: middle;
     display: inline-block;
-    height: 900px;
+    height: 90%;
     width: 30%;
     background-color: rgba(255, 255, 255, 0);
     color: rgb(0, 0, 0);
@@ -59,7 +59,7 @@ body {display:table-cell; text-align:center; vertical-align:middle;}
     background-position: center;
     background-size: cover;
     background-position: 0px 0px;
-    background-image: url("../images/stingers/stinger\ \(25\).jpg") !important;
+    background-image: url("../images/f-1.jpg") !important;
 }
 
 #middle-col {
@@ -88,19 +88,28 @@ body {display:table-cell; text-align:center; vertical-align:middle;}
     margin-bottom: 0px;
 }
 
+/* =========> Weather CSS <========= */
+
 #weather {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 5px;
     left: 50%;
     text-align: center;
     color: var(--font-color);
     margin-bottom: 0px;
     display: inline-flex;
+    vertical-align: middle;
 }
 
 #weather p {
     margin: 10px;
+}
+
+#weather img {
+    display: inline;
+    vertical-align: middle;
+    height: 2em;
 }
 
 /* =========> Drop Down CSS <========= */

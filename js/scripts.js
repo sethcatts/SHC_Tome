@@ -60,14 +60,14 @@ function updateClock() {
 }
 
 function updateWeather() {
-    console.log("Requesting Weather Data")
+    //console.log("Requesting Weather Data")
     let weather = {};
     let request = new XMLHttpRequest();
     request.open("GET", "http://api.weatherapi.com/v1/forecast.json?key=105f9c9a5ec7404b871193656221406&q=22901&days=3&aqi=no&alerts=no");
     request.send();
     request.onload = () => {
         weather = JSON.parse(request.response);
-        console.log(weather);
+        //console.log(weather);
         let temp = weather.current.temp_f + "F";
         document.getElementById("temp").innerHTML = temp;
         document.getElementById("condition").innerHTML = weather.current.condition.text
@@ -75,6 +75,35 @@ function updateWeather() {
 
     }
 }
+
+function toggleContent() {
+  var x = document.getElementById("todoist-col");
+  if (x.style.opacity == 0) {
+    x.style.opacity = 1;
+  } else {
+    x.style.opacity = 0;
+  }
+  x = document.getElementById("middle-col");
+  if (x.style.opacity == 0) {
+    x.style.opacity = 1;
+  } else {
+    x.style.opacity = 0;
+  }
+  x = document.getElementById("stinger-col");
+  if (x.style.opacity == 0) {
+    x.style.opacity = 1;
+  } else {
+    x.style.opacity = 0;
+  }
+
+}
+
+//Listen for keypress to hide 
+document.addEventListener("keypress", function(event) {
+    if (event.key == "s") {
+      toggleContent();
+    }
+});
 
 //randomQuote();
 randomStinger();
