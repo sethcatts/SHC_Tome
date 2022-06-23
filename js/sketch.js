@@ -1,6 +1,7 @@
 let particles = [];
-const num = 5000;
-const noiseScale = 0.01;
+const num = 2500;
+let noiseScale = 0.05;
+let nsMod = 0.01;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -12,6 +13,10 @@ function setup() {
 
 function draw() {
   background(0, 10);
+  if(noiseScale < 0.01 || noiseScale > 0.05) {
+    nsMod *= -1;
+  }
+  noiseScale = noiseScale + nsMod;
   for(let i = 0; i < num; i++) {
     let p = particles[i];
     point(p.x, p.y)
