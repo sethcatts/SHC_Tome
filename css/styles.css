@@ -12,13 +12,8 @@ body {
     color: var(--font-color);
     background-color: var(--background-color);
     font-family: var(--font-family);
-<<<<<<< HEAD
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/wallpapers/ll.jpg");
     background-size: cover;
-=======
-    background-image: url("https://i.pinimg.com/originals/3d/59/0f/3d590f4a22d76f0973a1c69f2b44053e.jpg");
-    background-size:cover;
->>>>>>> a6f132a60b3a878da341ff2b60d7ac2a197a70ba
 }
 
 html,
@@ -40,18 +35,10 @@ body {
 .column {
     vertical-align: middle;
     display: inline-block;
-<<<<<<< HEAD
     height: 90%;
     width: 30%;
     background-color: rgba(255, 255, 255, 0);
     color: rgb(0, 0, 0);
-=======
-    margin: 5px;
-    width: 225px;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.486);
-    border: 2px solid rgb(209, 209, 209);
->>>>>>> a6f132a60b3a878da341ff2b60d7ac2a197a70ba
 }
 
 #iframe-todoist {
@@ -88,30 +75,9 @@ body {
     background-image: url("../images/f-1.jpg") !important;
 }
 
-<<<<<<< HEAD
 #middle-col {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 0px;
-=======
-.tile-key-reminder {
-    font-size: 1.2em;
-    font-family: var(--font-keyReminder);
-    margin: 10px 10px 10px 10px;
-    padding: 3px;
-    background: rgb(255, 255, 255);
-    color: black;
-    border-radius: 6px;
-}
-
-#main-content-box {
-    width: 80%;
-    height: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(57, 63, 70, 0);
->>>>>>> a6f132a60b3a878da341ff2b60d7ac2a197a70ba
 }
 
 #pageQuote {
@@ -135,7 +101,6 @@ body {
     margin-bottom: 0px;
 }
 
-<<<<<<< HEAD
 /* =========> Weather CSS <========= */
 
 #weather {
@@ -148,15 +113,6 @@ body {
     margin-bottom: 0px;
     display: inline-flex;
     vertical-align: middle;
-=======
-#x-bar, #x-bar h1{
-    display: inline-block;
-}
-
-.hidden {
-    opacity: 0;
-    position: absolute;
->>>>>>> a6f132a60b3a878da341ff2b60d7ac2a197a70ba
 }
 
 #weather p {

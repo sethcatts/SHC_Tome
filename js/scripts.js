@@ -62,7 +62,8 @@ function updateWeather() {
         let temp = weather.current.temp_f + "F";
         document.getElementById("temp").innerHTML = temp;
         document.getElementById("condition").innerHTML = weather.current.condition.text
-        document.getElementById("current-weather-icon").src = weather.current.condition.icon;
+        document.getElementById("current-weather-icon").src = weather.current.condition.icon.slice(2);
+        console.log(weather.current.condition.icon.slice(2));
 
     }
 }
