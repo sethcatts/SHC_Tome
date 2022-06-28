@@ -125,6 +125,16 @@ body {
     height: 2em;
 }
 
+#rainChance {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    left: 50%;
+    text-align: center;
+    color: var(--font-color);
+
+}
+
 /* =========> Drop Down CSS <========= */
 
 /* Dropdown Button */

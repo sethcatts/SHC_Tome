@@ -58,11 +58,13 @@ function updateWeather() {
     request.send();
     request.onload = () => {
         weather = JSON.parse(request.response);
-        //console.log(weather);
+        console.log(weather);
+        console.log("Chance of rain: " + weather.forecast.forecastday[0].day.daily_chance_of_rain + "%");
         let temp = weather.current.temp_f + "F";
         document.getElementById("temp").innerHTML = temp;
         document.getElementById("condition").innerHTML = weather.current.condition.text
         document.getElementById("current-weather-icon").src = weather.current.condition.icon.slice(2);
+        document.getElementById("rainChance").innerHTML = "Rain: " + weather.forecast.forecastday[0].day.daily_chance_of_rain + "%";
         console.log(weather.current.condition.icon.slice(2));
 
     }
